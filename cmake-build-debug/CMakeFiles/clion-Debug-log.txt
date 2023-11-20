@@ -1,8 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/prozod/Projects/cpp/facultate/fun-prog -B /Users/prozod/Projects/cpp/facultate/fun-prog/cmake-build-debug
-CMake Error at CMakeLists.txt:8 (add_executable):
-  The target name "assignment_02/1.cpp" is reserved or not valid for certain
-  CMake features, such as generator expressions, and may result in undefined
-  behavior.
-
-
--- Configuring incomplete, errors occurred!

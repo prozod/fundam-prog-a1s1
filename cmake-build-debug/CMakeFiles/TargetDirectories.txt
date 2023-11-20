@@ -1,0 +1,3 @@
+/Users/prozod/Projects/cpp/facultate/fun-prog/cmake-build-debug/CMakeFiles/fun_prog.dir
+/Users/prozod/Projects/cpp/facultate/fun-prog/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/prozod/Projects/cpp/facultate/fun-prog/cmake-build-debug/CMakeFiles/rebuild_cache.dir

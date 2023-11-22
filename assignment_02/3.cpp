@@ -19,3 +19,28 @@ int main() {
     std::cout << "Copiii trebuie sa intre pe rand" << std::endl;
   }
 }
+
+// #include <iostream>
+//
+// using namespace std;
+//
+// int main()
+//
+// {
+//
+//   int copil1, copil2;
+//
+//   cout << "Masa primului copil: ";
+//   cin >> copil1;
+//
+//   cout << "Masa celui de al doilea copil: ";
+//   cin >> copil2;
+//
+//   if (copil1 + copil2 <= 100) {
+//     cout << "Ambii copii pot intra" << endl;
+//   } else {
+//     cout << "Copii trebuie sa intre pe rand" << endl;
+//   }
+//
+//   return 0;
+// }

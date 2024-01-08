@@ -44,9 +44,14 @@ void bubbleSort(int list[], int len) {
 }
 
 int main() {
-  int n = 10;
-  int points[10] = {58, 79, 34, 12, 58, 40, 79, 58, 30, 58};
-  char *vector = (char *)malloc(n * sizeof(char));
+  int n;
+  printf("Introduceti numarul de elemente: ");
+  scanf("%d", &n);
+  int *points = (int *)malloc(n * sizeof(int));
+  printf("Introduceti punctajele:\n");
+  for (int i = 0; i < n; ++i) {
+    scanf("%d", &points[i]);
+  }
   struct SetElement *mySet =
       (struct SetElement *)malloc(n * sizeof(struct SetElement));
   int setSize = 0;

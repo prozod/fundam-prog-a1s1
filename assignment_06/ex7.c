@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct SetElement {
+  int points;
+  int count;
+};
+
+int compareChars(const void *a, const void *b) {
+  return *(char *)a - *(char *)b;
+}
+
+int findElement(struct SetElement set[], int size, char element, int *index) {
+  for (int i = 0; i < size; ++i) {
+    if (set[i].points == element) {
+      *index = i;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+void addOrUpdateElement(struct SetElement set[], int *size, char element) {
+  int index;
+  if (findElement(set, *size, element, &index)) {
+    set[index].count++;
+  } else {
+    set[*size].points = element;
+    set[*size].count = 1;
+    (*size)++;
+  }
+}
+
+void bubbleSort(int list[], int len) {
+  for (int i = 0; i < len; i++) {
+    for (int j = 1; j < len; j++) {
+      if (list[j - 1] < list[j]) {
+        int aux = list[j - 1];
+        list[j - 1] = list[j];
+        list[j] = aux;
+      }
+    }
+  }
+}
+
+int main() {
+  int n = 10;
+  int points[10] = {58, 79, 34, 12, 58, 40, 79, 58, 30, 58};
+  char *vector = (char *)malloc(n * sizeof(char));
+  struct SetElement *mySet =
+      (struct SetElement *)malloc(n * sizeof(struct SetElement));
+  int setSize = 0;
+
+  bubbleSort(points, n);
+  for (int i = 0; i < n; ++i) {
+    addOrUpdateElement(mySet, &setSize, points[i]);
+  }
+
+  for (int i = 0; i <= 2; ++i) {
+    printf("Premiul %d - %d cu %dp\n", i + 1, mySet[i].count, mySet[i].points);
+  }
+}

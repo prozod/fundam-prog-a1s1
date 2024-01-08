@@ -1,4 +1,5 @@
 #include <iostream>
+
 int numara_aparitii(char c, char text[200]) {
   int i = 0;
   int nr = 0;
